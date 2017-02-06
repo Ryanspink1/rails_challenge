@@ -1,0 +1,23 @@
+<h1>Student:<%= @student.name %></h1>
+
+<h3>Alumnus Status: <%=@student.is_alumnus %></h3>
+<h3>Addresses: </h3>
+    <ul>
+      <%@student.addresses.each do |address| %>
+        <li>
+          <%=address.number %>
+          <%=address.street %>
+          <%=address.city %>
+          <%=address.state %>
+        </li>
+      <% end %>
+    </ul>
+
+<h3>Courses:</h3>
+  <ul>
+    <%@student.courses.each do |course| %>
+      <li>
+        <%= course.name %>
+      </li>
+    <% end %>
+  </ul>
